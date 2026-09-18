@@ -1,0 +1,7 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "es",
+  "wordTimestamps": true,
+  "keepIntermediateAudio": false,
+  "temporaryDirectory": "/tmp/abrxos-transcriber"
+}

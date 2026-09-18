@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "abrxos.app-version.v1",
+  "app": "Transcriber",
+  "version": "0.1.0",
+  "canonVersion": "R6",
+  "status": "development",
+  "createdAt": "2026-09-18T00:00:00Z"
+}

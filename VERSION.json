@@ -1,0 +1,1 @@
+{"name":"Abrxs_transcriber_v1","version":"0.1.0","status":"alpha","platform":"macOS Apple Silicon","engine":"Whisper MLX Turbo","workerProtocol":"abrxos.worker.v1","wordLevelTiming":true,"roadmap":["PLAN.json","Alignment Review","SOURCE_ALIGNMENT.json","Geometra bridge","Cutter bridge","VideoFlow adapter"]}

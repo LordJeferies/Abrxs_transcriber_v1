@@ -1,0 +1,118 @@
+from pathlib import Path
+import subprocess
+import sys
+
+
+
+ROOT=Path(__file__).resolve().parents[2]
+
+
+TRANSCRIBER=(
+    ROOT /
+    "transcriber" /
+    "current" /
+    "transcriber_app.py"
+)
+
+
+
+def run_transcriber(job):
+
+
+    source=Path(
+        job["sourcePath"]
+    )
+
+
+    output=Path(
+        job["outputDir"]
+    )
+
+
+    output.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+
+    json_output=(
+        output /
+        "transcript.json"
+    )
+
+
+    txt_output=(
+        output /
+        "transcript.txt"
+    )
+
+
+    cmd=[
+
+        sys.executable,
+
+        str(TRANSCRIBER),
+
+        str(source),
+
+        "--model",
+        job["model"],
+
+        "--language",
+        job.get(
+            "language",
+            "es"
+        ),
+
+        "--project-id",
+        job["projectId"],
+
+        "--source-id",
+        job.get(
+            "sourceId",
+            "DEFAULT"
+        ),
+
+        "--output",
+        str(json_output),
+
+        "--text-output",
+        str(txt_output)
+
+    ]
+
+
+    process=subprocess.Popen(
+
+        cmd,
+
+        stdout=subprocess.PIPE,
+
+        stderr=subprocess.PIPE,
+
+        text=True
+
+    )
+
+
+    stdout,stderr=process.communicate()
+
+
+    return {
+
+        "code":
+            process.returncode,
+
+        "stdout":
+            stdout,
+
+        "stderr":
+            stderr,
+
+        "json":
+            str(json_output),
+
+        "txt":
+            str(txt_output)
+
+    }

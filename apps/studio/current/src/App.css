@@ -1,0 +1,129 @@
+:root {
+  color: #f4f5f7;
+  background: #090b10;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #090b10;
+}
+
+.app {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 80px;
+}
+
+header {
+  margin-bottom: 22px;
+}
+
+header p {
+  color: #9ca3af;
+}
+
+.card {
+  background: #151923;
+  border: 1px solid #2b3342;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 18px 0;
+}
+
+label {
+  display: block;
+  color: #aab2c0;
+  font-size: 13px;
+  margin: 16px 0 7px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 9px;
+  border: 1px solid #3a4355;
+  background: #0e1118;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 16px;
+  background: #30394a;
+  color: white;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+}
+
+button:hover {
+  background: #46536a;
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: #4d7cff;
+  font-weight: 700;
+}
+
+.path {
+  color: #9ca3af;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  margin: 7px 0 12px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.progress {
+  height: 12px;
+  margin: 16px 0 8px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #252c3a;
+}
+
+.progress div {
+  height: 100%;
+  background: linear-gradient(90deg, #4d7cff, #ad7cff);
+  transition: width .25s ease;
+}
+
+.file {
+  display: grid;
+  gap: 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #2b3342;
+}
+
+.file span {
+  color: #aab2c0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  max-height: 320px;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: #0b0e14;
+  color: #a8f0c2;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    width: min(100% - 24px, 1100px);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "model": "/RUTA/LOCAL/AL/MODELO",
+  "language": "es",
+  "wordTimestamps": true,
+  "keepIntermediateAudio": false,
+  "temporaryDirectory": "/tmp/abrxos-transcriber"
+}
